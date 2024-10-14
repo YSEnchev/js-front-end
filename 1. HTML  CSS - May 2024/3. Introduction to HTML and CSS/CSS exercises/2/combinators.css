@@ -1,0 +1,22 @@
+div p {
+    color: darkblue;
+}
+
+ul > li{
+    list-style-type: circle;
+}
+
+p > span{
+    color: red;
+    font-weight: bold;
+}
+
+p + p {
+    background-color: #eee;
+}
+
+
+p ~ span {
+    font-weight: bold;
+    color: red
+}
