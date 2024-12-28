@@ -26,7 +26,6 @@ function roadRadar(driverSpeed, area) {
 
 roadRadar(120, 'interstate');
 
-
 function printResult(speed, areaLimit) {
 
     const speedingLimit = 20;
