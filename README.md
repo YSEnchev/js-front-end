@@ -1,1 +1,2 @@
-JS front-end-project    
+js-front-end-project 
+
