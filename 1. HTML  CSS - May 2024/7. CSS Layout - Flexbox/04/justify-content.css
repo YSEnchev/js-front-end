@@ -1,0 +1,41 @@
+
+.flex-container{
+    width: 400px;
+    border: 2px solid blue;
+    padding: 1em;
+    margin: 0.7em 0em;
+    display: flex;
+}
+
+.flex-container.flex-start{
+    justify-content: flex-start;
+}
+
+.flex-container.center{
+    justify-content: center;
+}
+
+.flex-container.flex-end{
+    justify-content: flex-end;
+}
+
+.flex-container.space-between{
+    justify-content: space-between;
+}
+
+.flex-container.space-around{
+    justify-content: space-around;
+}
+
+.flex-container.space-evenly{
+    justify-content: space-evenly;
+}
+
+.flex-item {
+    border: 2px solid black;
+    background: #eee;
+    padding: 1em;
+}
+
+
+

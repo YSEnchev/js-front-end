@@ -1,0 +1,26 @@
+.flex-container{
+    width: 780px;
+    border: 2px solid blue;
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.flex-container.gap-row {
+    gap: 2em 0;
+}
+.flex-container.gap-column {
+   gap: 0 2em;
+}
+
+.flex-container.gap {
+    gap: 2em;
+}
+
+
+.flex-item {
+    border: 2px solid black;
+    background: #eee;
+    padding: 2em;
+}

@@ -1,0 +1,41 @@
+
+body{
+    padding: 1em
+}
+
+h1{
+    margin-bottom: 1em;
+}
+
+.flex-container {
+    width: 400px;
+    border: 2px solid blue;
+    padding: 1em;
+    margin: 1em 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.flex-container.flex-grow-one .flex-item{
+    flex-grow: 1;
+}
+
+.flex-container.flex-shrink-zero .flex-item{
+    flex-shrink: 0;
+}
+
+
+.flex-container.flex-basis-5em .flex-item{
+    flex-basis: 5em;
+}
+
+.flex-container.flex-basis-5em.flex-container.flex-container.flex-grow-one{
+
+    width: auto;
+}
+
+.flex-item{
+    border: 2px solid black;
+    padding: 1em;
+    background: #eee;
+}

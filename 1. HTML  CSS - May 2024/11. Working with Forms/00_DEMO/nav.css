@@ -1,0 +1,127 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 14px/1.5 Lato, sans-serif;
+}
+
+body {
+    padding: 2em;
+    background: #eee;
+}   
+
+body::before {
+    display: block;
+    background-color: rgb(15, 0, 153);
+    color: white;
+    margin-bottom: 2em;
+    border-radius: 0.3em;
+    padding: 1em 2em;
+}
+
+.site {
+    max-width: 600px;
+    margin: 0 auto;
+    background:  #fff;
+    box-shadow: 0 0 1em 0 rgb(0,0,0, 0.1);
+    border-radius: 0.3;
+    padding: 2em;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 0.5em;
+}
+
+.main-nav li {
+    display: block;
+    list-style: none outside;
+}
+
+.main-nav a {
+    display: block;
+    text-decoration: none;
+    background: darkorange;
+    color: white;
+    padding: 0.5em 0.8em;
+    border-radius: 0.3em;
+}
+
+.main-nav a:hover {
+    background: rgb(164, 100, 22);
+}
+
+
+@media (hover: hover) {
+    
+    body::before {
+        content: 'Hover!';
+    }
+
+    #main-nav-toggle,
+    label[for="main-nav-toggle"] {
+        display: none;
+    }
+}
+
+@media (hover: none){
+    body::before {
+        content: 'NO Hover';
+        background: #090;
+    }
+
+    #main-nav-toggle {
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        top: 0; left: 0;
+    }
+
+    .main-nav {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        inset: 0;
+        padding: 2em;
+        background: #fff;
+        align-items: stretch;
+        justify-content: center;
+    }
+    
+
+    .main-nav ul {
+        flex-direction: column;
+    }
+
+    #main-nav-toggle:not(:checked) + .site label .close {
+        display: none;
+    }
+
+    #main-nav-toggle:not(:checked) + .site .site-header .main-nav {
+        display: none;
+    }
+
+    #main-nav-toggle:checked + .site label .open {
+        display: none;
+    }
+
+    #main-nav-toggle:checked + .site label[for="main-nav-toggle"] {
+        position: absolute;
+        top: 2em;
+        right: 2em;
+        z-index: 1000;
+        background: orange;
+        color: #fff;
+        padding: 1em 1.2em;
+        border-radius: 0.3em;
+    }
+}

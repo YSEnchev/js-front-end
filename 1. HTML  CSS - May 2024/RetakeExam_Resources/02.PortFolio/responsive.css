@@ -1,0 +1,39 @@
+
+@media (width <= 600px ) {
+    
+    nav ul {
+        display: none;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .site-header > i {
+        left: 256px;
+    }
+    
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center
+    }
+    
+    .about-header {
+        text-align: center;
+        width: 156px;
+        display: inline;
+        position: absolute;
+        bottom: -339px;
+    }
+    
+
+    .about-text {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        width: 292px;
+        display: inline-block;
+        margin-left: 213px;
+    }
+}

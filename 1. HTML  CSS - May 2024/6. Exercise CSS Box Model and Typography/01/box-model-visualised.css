@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box-model-visualised {
+    max-width: 610px;
+    margin: 4em auto;
+}
+
+.box-model-visualised div {
+    border: 1px dashed #333;
+    padding: 0.5em 2em 2em 2em;
+}
+
+.box-model-visualised div:before {
+    display: block;
+    padding-bottom: 0.5em;
+    margin-left: -1.5em;
+    margin-top: -0.5em;
+}
+.box-model-visualised .margin {
+    background-color:  #FF966F;
+}
+
+.box-model-visualised .margin::before {
+    
+    content: 'margin';
+}
+
+.box-model-visualised .border {
+    background-color: #FFE8C6;
+}
+
+.box-model-visualised .border::before {
+    
+    content: 'border';
+}
+
+.box-model-visualised .padding{
+    background-color: #85EB85;
+}
+
+.box-model-visualised .padding::before {
+    
+    content: 'padding';
+}
+
+.box-model-visualised .content{
+    text-align: center;
+    background-color: #A3D2E2;
+    padding: 1em;
+}

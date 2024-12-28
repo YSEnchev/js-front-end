@@ -1,0 +1,34 @@
+
+
+.flex-container {
+    width: 400px;
+    height: 200px;
+    border: 2px solid blue;
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;    
+    align-items: flex-start;
+}
+
+.flex-container.align-flex-start .flex-item:nth-child(2){
+    align-self: flex-start;
+}
+
+
+.flex-container.align-self-center .flex-item:nth-child(2){
+    align-self: center;
+}
+
+.flex-container.align-self-flex-end .flex-item:nth-child(2){
+    align-self: flex-end;
+}
+
+.flex-container.baseline .flex-item:nth-child(2){
+    align-self: baseline;
+}
+
+.flex-item{
+    border: 2px solid black;
+    padding: 1em;
+    background: #eee;
+}

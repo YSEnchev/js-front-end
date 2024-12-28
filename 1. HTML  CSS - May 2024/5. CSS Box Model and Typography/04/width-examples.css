@@ -1,0 +1,17 @@
+*{
+ box-sizing: border-box;
+}
+
+body{
+    border: 2px solid red;
+}
+
+div{
+    border: 20px solid black;
+
+}
+
+.width-100{
+width: 100%;
+padding: 40px;
+}

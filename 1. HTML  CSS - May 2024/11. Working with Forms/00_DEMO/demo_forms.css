@@ -1,0 +1,179 @@
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 14px/1.5 Lato, sans-serif;
+}
+
+body, input, select, option, button, textarea {
+    font: inherit;
+}
+
+body {
+    padding: 2em;
+    background: #eee;
+}
+
+form {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2em;
+    background: #fff;
+    border-radius: 0.3em;
+    box-shadow: 0 0 1em 0 rgb(0,0,0, 0.1);
+}
+
+form h2 {
+    margin-bottom: 1rem;
+}
+
+form ul li {
+    list-style: none outside;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 2em;
+    border-radius: 0.3em;
+    margin-bottom: 2em;
+}
+
+fieldset legend {
+    padding: 0 1em;
+    margin-left: -1em;
+    font-weight: bold;
+}
+
+input[type="text"],
+.field label {
+    display: block;
+    width: 100%;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[required] ~ label::after {
+    display: inline-block;
+    content: "*";
+    padding-left: 0.3em;
+    color: #c00;
+}
+
+select,
+textarea,
+input {
+    padding: 0.5em 0.8em;
+    border: 2px solid #ccc;
+    background: #fff;
+    border-radius: 0.3em;
+    outline: none;
+}
+
+input[type="email"]:user-invalid,
+input[type="text"]:user-invalid {
+    border-color: red;
+}
+
+input[type="email"]:user-invalid ~ label,
+input[type="email"]:user-invalid ~ .helper,
+input[type="text"]:user-invalid ~ label,
+input[type="text"]:user-invalid ~ .helper {
+    color: red;
+}
+
+input[type="text"]:user-invalid ~ .helper.error {
+    display: block !important;
+}
+
+input[type="email"]:user-valid,
+input[type="text"]:user-valid {
+    border-color: #090;
+}
+
+input[type="email"]:user-valid ~ label,
+input[type="text"]:user-valid ~ label {
+    color: #090;
+}
+
+input[type="email"]:user-valid ~ label::before,
+input[type="text"]:user-valid ~ label::before {
+    display: block;
+    content: '\f00c';
+    font-family: "Font Awesome 6 Free";
+    position: absolute;
+    top: 0; right: 0;
+}
+
+input[type="email"]:focus,
+input[type="text"]:focus {
+    border-color: orange;
+    position: relative;
+    top: 2px;
+}
+
+input[type="email"]:focus ~ label,
+input[type="text"]:focus ~ label {
+    color: darkorange;
+}
+
+input[type="submit"] {
+    border-color: #ccc;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.5em;
+    position: relative;
+}
+
+.field label {
+    order: -1;
+}
+
+.field .helper {
+    font-size: 0.9em;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+.field .helper.error {
+    display: none;
+}
+
+.field-radio,
+.field-checkbox {
+    padding-bottom: 1.5em;
+}
+
+
+.field-radio ul,
+.field-checkbox ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 0.3em;
+    padding: 0.5em;
+}
+
+.field-radio ul li,
+.field-checkbox ul li {
+    flex: 1 1 120px;    
+    display: flex;
+    align-items: center;
+}
+
+.field-radio ul li label {
+    padding-left: 0.2em;
+}

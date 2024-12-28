@@ -1,0 +1,36 @@
+div{
+    border: 2px solid black;
+    
+}
+
+.uniform-margin{
+   margin: 20px; 
+}
+
+.non-uniform-margin{
+    margin: 10px 30px 20px 40px;
+}
+
+.negative-margin{
+    margin: -20px;
+}
+
+.margin-bottom {
+    margin-bottom: 40px;
+}
+
+.margin-top{
+    margin-top: 20px;
+}
+
+.container div {
+    display: inline-block;
+}
+
+.margin-inline {
+    margin-inline: 20px;
+}
+
+.bleeding-margin{
+    margin-top: 20px;
+}

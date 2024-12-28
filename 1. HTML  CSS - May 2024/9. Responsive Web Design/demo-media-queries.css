@@ -1,0 +1,20 @@
+body {
+    background: #369;
+    color: #fff;
+}
+/* 
+@media (max-width: 600px){
+
+    body {
+        background: #090;
+    }
+
+} */
+
+@media (hover: hover){
+
+    body {
+        background: #090;
+    }
+
+}

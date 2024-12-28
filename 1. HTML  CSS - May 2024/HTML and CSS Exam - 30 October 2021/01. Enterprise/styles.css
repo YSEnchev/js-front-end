@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+body {
+    
+    font-family: Helvetica, sans-serif;
+    color: #25303f;
+    align-items: flex-end;      
+}
+
+.site {
+    max-width: 960px;
+    margin: 140px auto;
+    background: #f6f8f9;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    text-align: right;
+    
+}
+
+.site .content {
+    width: 38%;
+    padding: 48px 24px;
+    text-align: left;
+    margin-left: 25px;
+
+}
+
+.site .content .second-title {
+    font-size: 10px;
+    margin-bottom: 14px;
+    font-weight: normal;
+    color: #232e3c;
+}
+
+.site .content .main-title {
+    font-size: 32px;
+    font-weight: normal;
+    color: #273240;
+    margin-bottom: 20px;
+}
+
+.site .content .content-text {
+    font-size: 14px;
+    color: #636e78;
+    margin-bottom: 24px;
+}
+
+.site .content .btn {
+    all: unset;
+    border: 1px solid #25303f;
+    padding: 12px 18px;
+    border-radius: 2px;
+}
+
+.site .content .btn.btn-primary  {
+    background: #786eff;
+    border: #786eff;
+    color: #ffffff;
+}
+
+.img-pick {
+    width: 48%;
+    display: inline-block;
+    margin-right: 30px;
+}

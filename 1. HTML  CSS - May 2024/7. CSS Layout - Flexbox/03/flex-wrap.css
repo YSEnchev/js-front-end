@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 14px/1.5 Lato sans-serif ;
+}
+
+body{
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+.flex-container {
+    border: 2px solid blue;
+    width: 460px;
+    padding: 0.5em;
+    display: flex;
+    margin: 0.5em 0em;
+    
+}
+
+
+.flex-container.nowrap{
+    flex-wrap: nowrap;
+}
+
+.flex-container.wrap{
+    flex-wrap: wrap;
+}
+
+.flex-container.wrap-reverse{
+    flex-wrap: wrap-reverse;
+}
+
+.flex-item {
+    border: 2px solid #000;
+    background: #eee;
+    padding: 1em;
+}

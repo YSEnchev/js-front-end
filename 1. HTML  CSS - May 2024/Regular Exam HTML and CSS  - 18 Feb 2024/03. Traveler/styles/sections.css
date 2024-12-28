@@ -1,0 +1,35 @@
+.section {
+    padding: 2em max(calc((100vw - 800px) / 2), 2em);
+}
+
+.section.section-banner,
+.section.section-header,
+.section.section-footer {
+    padding: 2em max(calc((100vw - 1300px) / 2), 2em);
+}
+
+.section.section-banner {
+    color: #fff;
+    text-align: center;
+    padding-top: 20em;
+}
+
+.section-banner h2 {
+    font-size: 6em;
+}
+
+.section-banner p {
+    max-width: 80ch;
+    margin: 0 auto;
+    font-size: 1.4em;
+    padding: 7em 0;
+}
+
+.section-testimonial {
+    background: #FFF0E8E1;
+}
+
+.section-support {
+    background-color: #f64545e1;
+    color: #fff;
+}

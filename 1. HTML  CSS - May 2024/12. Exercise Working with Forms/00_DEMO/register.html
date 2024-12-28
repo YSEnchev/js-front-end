@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register-Form</title>
+    <link rel="stylesheet" href="register-style.css">
+</head>
+<body>
+
+    <form action="#" class="register">
+
+        <header class="header">
+            <h1>Register</h1>
+        </header>
+
+        <fieldset>
+
+            <legend>User details</legend>
+
+            <div class="field text icon-username">
+                <input type="text" id="username" required>
+                <i class="fa-solid fa-user"></i>
+                <label for="username">Username: </label>
+                <span class="helper"> Hello there</span>
+            </div>
+
+            <div class="field text icon-email">
+                <input type="email" id="email" required>
+                <label for="username">Email: </label>
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Password section:</legend>
+
+            <div class="field text icon-password">
+                <input type="password" id="password" required>
+                <label for="password">Password</label>
+                <i class="fa-solid fa-key"></i>
+            </div>
+
+            <div class="field text icon-password">
+                <input type="password" id="re-password" required>
+                <label for="re-password">Repeat Password</label>
+                <i class="fa-solid fa-key"></i>
+            </div>
+
+        </fieldset>
+
+        <input type="submit" value="register">
+
+    </form>
+    
+</body>
+</html>
