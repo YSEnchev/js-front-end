@@ -19,7 +19,7 @@ function spiceMustFlow(startingYield) {
     }
 }
 
-spiceMustFlow(99)
+spiceMustFlow(111)
 
 
 // 1.Начален добив 110

@@ -228,8 +228,10 @@ body {
     padding: 20px 200px;
 }
 
+
 .content-details .left {
-    flex-direction: column;
+    display: inline-block;
+
     
 }
 
