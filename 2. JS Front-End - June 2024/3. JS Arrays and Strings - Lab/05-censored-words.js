@@ -6,6 +6,7 @@ function censoredWords(text, replaceWord) {
 }
 
 // function solveWithoutReplaceAll(text, word) {
+
 //     while (text.includes(word)) {
 //         text = text.replace(word, '*'.repeat(word.length))
 //     }
