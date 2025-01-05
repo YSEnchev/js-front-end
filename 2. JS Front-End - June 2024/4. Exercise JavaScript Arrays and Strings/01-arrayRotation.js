@@ -1,12 +1,12 @@
 function arrayRotation(arr, rotations) {
-  const cutOfIndex = rotations % arr.length
+  const cutOfIndex = rotations % arr.length;
 
-  const leftSide = arr.slice(0, cutOfIndex)
-  const rightSide = arr.slice(cutOfIndex)
+  const leftSide = arr.slice(0, cutOfIndex);
+  const rightSide = arr.slice(cutOfIndex);
 
-  const result = rightSide.concat(leftSide)
+  const result = rightSide.concat(leftSide);
 
-  console.log(result.join(' '))
+  console.log(result.join(' '));
 }
 
-arrayRotation([2, 4, 15, 31], 5)
+arrayRotation([2, 4, 15, 31], 5);
