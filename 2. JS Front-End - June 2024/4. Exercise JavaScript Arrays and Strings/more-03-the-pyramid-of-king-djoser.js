@@ -30,4 +30,5 @@ function thePyramidOfKingDjoser(baseSize, incr) {
   console.log(`Gold required: ${Math.ceil(gold)}`);
   console.log(`Final pyramid height: ${Math.floor(height)}`);
 }
+
 thePyramidOfKingDjoser(23, 0.5);
