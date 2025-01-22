@@ -2,9 +2,9 @@ function addAndSubtract(num1, num2, num3) {
   const sumNum1Num2 = (x, y) => x + y;
   const subtractSumWithNum3 = (x, y) => x - y;
 
-  const FirstResult = sumNum1Num2(num1, num2);
+  //   const FirstResult = sumNum1Num2(num1, num2);
 
-  const finalResult = subtractSumWithNum3(FirstResult, num3);
+  const finalResult = subtractSumWithNum3(sumNum1Num2(num1, num2), num3);
 
   console.log(finalResult);
 }
