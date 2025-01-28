@@ -13,9 +13,26 @@ function oddAndEvenSum(number) {
       } else {
         oddDigit.push(lastDigit);
       }
+
+      currentNumber = parseInt(currentNumber / 10);
     }
+
+    return [evenDigit, oddDigit];
   };
+
+  const getSumOfDigits = (array) => array.reduce((a, b) => a + b, 0);
+  const printOutputResult = (evenSum, oddSum) =>
+    console.log(`Odd sum = ${oddSum}, Even sum = ${evenSum}`);
+
+  const [evenDigits, oddDigits] = getEvenAndOddDigits(number);
+
+  const evenSum = getSumOfDigits(evenDigits);
+  const oddSum = getSumOfDigits(oddDigits);
+
+  // console.log(evenSum, oddSum);
+
+  printOutputResult(evenSum, oddSum);
 }
 
-number(1000435);
-number(3495892137259234);
+// oddAndEvenSum(1000435);
+oddAndEvenSum(3495892137259234);
