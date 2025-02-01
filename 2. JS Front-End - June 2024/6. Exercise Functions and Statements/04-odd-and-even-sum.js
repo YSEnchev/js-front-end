@@ -7,15 +7,16 @@ function oddAndEvenSum(number) {
     let currentNumber = x;
 
     while (currentNumber > 0) {
-      const lastDigit = currentNumber % 10; // взимаме последното число;
+      const lastDigit = currentNumber % 10; // взимаме последната цифра от числото;
 
       if (lastDigit % 2 === 0) {
+        // определяме дали е четно или не;
         evenDigit.push(lastDigit);
       } else {
         oddDigit.push(lastDigit);
       }
 
-      currentNumber = parseInt(currentNumber / 10); // премахваме последното число
+      currentNumber = parseInt(currentNumber / 10); // премахваме последната цифра от числото
     }
 
     return [evenDigit, oddDigit]; // връщаме два масива - четни и нечетни числа
