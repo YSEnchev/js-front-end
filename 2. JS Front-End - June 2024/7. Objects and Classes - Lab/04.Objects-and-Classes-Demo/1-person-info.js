@@ -1,14 +1,11 @@
 function solve(firstName, lastName, age) {
-    let info = {
-        firstName,
-        lastName,
-        age,
-    };
+  let info = {
+    firstName,
+    lastName,
+    age,
+  };
 
-    return info;
+  return info;
 }
 
-solve("Peter", 
-"Pan",
-"20"
-);
+solve('Peter', 'Pan', '20');
