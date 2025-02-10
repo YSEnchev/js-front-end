@@ -9,6 +9,9 @@ function solve(input) {
   Object.entries(addressBook)
     .sort((a, b) => a[0].localeCompare(b[0]))
     .forEach(([name, address]) => console.log(`${name} -> ${address}`));
+  //   for (const element of input) {
+  //     const [name, address] = input.split(':');
+  //     addressBook[name] = address;
 }
 
 solve([
