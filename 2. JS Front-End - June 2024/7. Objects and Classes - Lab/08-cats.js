@@ -14,6 +14,9 @@ function solve(input) {
     .map((entry) => entry.split(' '))
     .map(([name, age]) => new Cat(name, age))
     .forEach((cat) => cat.meow());
+
+  //   firstCat = new Cat('Mellow', '2');
 }
 
 solve(['Mellow 2', 'Tom 5']);
+solve(['Candy 1', 'Poppy 3', 'Nyx 2']);
