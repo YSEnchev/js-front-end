@@ -1,8 +1,8 @@
 function solve(availableStocks, deliveredStocks) {
   function generateObjectData(inputArr) {
     // създаваме функция, която генерира данните от подадения вход;
-    return new Array(inputArr.length / 2) // определяме дължината на обекта, който трябва да създадем;
-      .fill({}) // създаваме празен обект;
+    return new Array(inputArr.length / 2) // създаваме нов масив и определяме дължината;
+      .fill({}) // създаваме празен обект в масива;
       .reduce((acc, curr, i) => {
         const product = inputArr[i + i]; //определяме името на продукта за всяка итерация по индекса, който заема;
         const quantity = Number(inputArr[i + i + 1]); //определяме количеството на продукта за всяка итерация по индекса, който заема;
@@ -12,9 +12,9 @@ function solve(availableStocks, deliveredStocks) {
           curr[product] = 0; // ако не съществува, създаваме нов с нулева стойност;
         }
 
-        curr[product] += quantity; // наливаме количество на продукта;
+        curr[product] += quantity; // добавяме количество на продукта;
 
-        return Object.assign(acc, curr); // обединява стойностите между два обекта в един обект (acc + curr);
+        return Object.assign(acc, curr); // предаваме генерираната стойност от curr към acc и преминаваме на следваща итерация (ACC пази данните от curr);
       }, {});
   }
 
