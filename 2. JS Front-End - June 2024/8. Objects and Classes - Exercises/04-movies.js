@@ -3,12 +3,12 @@ function solve(inputCommands) {
 
   inputCommands.forEach((command) => {
     if (command.startsWith('addMovie')) {
-      const [name] = command.split('addMovie ').filter(Boolean); // с filter чистим всики празни места след split-а
+      const [name] = command.split('addMovie ').filter(Boolean); // с filter(Boolean) чистим всики празни места след split-а. Премахва всички falsy стойности
       dataBaseMovie.push({ name });
     } else if (command.includes('directedBy')) {
       const [name, director] = command.split(' directedBy ').filter(Boolean);
 
-      const movie = dataBaseMovie.find((x) => x?.name === name);
+      const movie = dataBaseMovie.find((x) => x?.name === name); // x?.name -> x? достъпи .наме само ако го има. Безопасно достъпване на пропърти
 
       if (movie?.name) {
         movie.director = director;
