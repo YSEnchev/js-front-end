@@ -3,7 +3,7 @@ function solve(inputCommands) {
 
   inputCommands.forEach((command) => {
     if (command.startsWith('addMovie')) {
-      const [name] = command.split('addMovie').filter(Boolean); // с filter чистим всики празни места след split-а
+      const [name] = command.split('addMovie ').filter(Boolean); // с filter чистим всики празни места след split-а
       dataBaseMovie.push({ name });
     } else if (command.includes('directedBy')) {
       const [name, director] = command.split(' directedBy ').filter(Boolean);
@@ -24,7 +24,9 @@ function solve(inputCommands) {
     }
   });
 
-  dataBaseMovie.forEach((x) => console.log(x));
+  dataBaseMovie
+    .filter((movie) => movie.name && movie.director && movie.date)
+    .forEach((movie) => console.log(JSON.stringify(movie)));
 }
 
 solve([
