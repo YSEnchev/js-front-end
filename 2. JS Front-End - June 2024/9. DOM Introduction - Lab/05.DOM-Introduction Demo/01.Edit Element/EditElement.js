@@ -1,3 +1,4 @@
 function editElement(element, match, replacer) {
-    element.textContent = element.textContent.replaceAll(match, replacer);
+  element.textContent = element.textContent.replaceAll(match, replacer);
+  console.log(element);
 }
