@@ -2,7 +2,8 @@ function toggle() {
   const buttonElement = document.querySelector('.head span.button');
   const extraElement = document.querySelector('#extra');
 
-  const { display } = extraElement.style;
+  // const { display } = extraElement.style;
+  const display = extraElement.style.display;
   const isHidden = display === 'none';
 
   if (!display || isHidden) {
