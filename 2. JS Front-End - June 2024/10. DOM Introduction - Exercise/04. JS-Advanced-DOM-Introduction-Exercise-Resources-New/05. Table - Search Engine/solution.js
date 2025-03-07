@@ -1,8 +1,11 @@
 function solve() {
-   document.querySelector('#searchBtn').addEventListener('click', onClick);
+  document.querySelector('#searchBtn').addEventListener('click', onClick);
 
-   function onClick() {
-      //   TODO:
+  function onClick() {
+    const tableRowElements = document.querySelectorAll(
+      'table.container tbody tr'
+    );
 
-   }
+    function getMatchElements(input) {}
+  }
 }
