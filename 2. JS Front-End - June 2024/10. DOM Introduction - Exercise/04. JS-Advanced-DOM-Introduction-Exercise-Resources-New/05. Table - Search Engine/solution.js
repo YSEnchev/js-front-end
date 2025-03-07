@@ -6,6 +6,16 @@ function solve() {
       'table.container tbody tr'
     );
 
-    function getMatchElements(input) {}
+    function getMatchElements(input) {
+      return [...tableRowElements].filter((rowElement) =>
+        rowElement.textContent.toLowerCase().includes(input.toLowerCase)
+      );
+    }
+
+    const searchValue = document.getElementById('searchField').value;
+
+    const matchRows = getMatchElements(searchValue);
+
+    console.log(matchRows);
   }
 }
