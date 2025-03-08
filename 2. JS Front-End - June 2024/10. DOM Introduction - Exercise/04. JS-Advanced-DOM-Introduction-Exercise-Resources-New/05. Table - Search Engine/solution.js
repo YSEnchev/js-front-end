@@ -12,6 +12,14 @@ function solve() {
       );
     }
 
+    function clearPreviousState() {
+      [...tableRowElements].forEach((rowEl) => {
+        rowEl.classList.remove('select');
+      });
+    }
+
+    clearPreviousState;
+
     const searchValue = document.getElementById('searchField').value;
     const matchRows = getMatchElements(searchValue);
 
