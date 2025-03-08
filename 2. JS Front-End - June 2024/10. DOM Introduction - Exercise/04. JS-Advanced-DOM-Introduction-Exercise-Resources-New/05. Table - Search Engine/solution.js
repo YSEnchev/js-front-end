@@ -8,14 +8,15 @@ function solve() {
 
     function getMatchElements(input) {
       return [...tableRowElements].filter((rowElement) =>
-        rowElement.textContent.toLowerCase().includes(input.toLowerCase)
+        rowElement.textContent.toLowerCase().includes(input.toLowerCase())
       );
     }
 
     const searchValue = document.getElementById('searchField').value;
-
     const matchRows = getMatchElements(searchValue);
 
-    console.log(matchRows);
+    matchRows.forEach((matchRow) => {
+      matchRow.classList.add('select');
+    });
   }
 }
