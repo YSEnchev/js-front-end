@@ -18,13 +18,15 @@ function solve() {
       });
     }
 
-    clearPreviousState;
+    clearPreviousState();
 
-    const searchValue = document.getElementById('searchField').value;
-    const matchRows = getMatchElements(searchValue);
+    const searchFieldElement = document.getElementById('searchField');
+    const matchRows = getMatchElements(searchFieldElement.value);
 
     matchRows.forEach((matchRow) => {
       matchRow.classList.add('select');
     });
+
+    searchFieldElement.value = '';
   }
 }
