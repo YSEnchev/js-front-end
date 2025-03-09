@@ -1,29 +1,28 @@
 function solve() {
   document.querySelector('#searchBtn').addEventListener('click', onClick);
 
-  function onClick() {
-    const tableRowElements = document.querySelectorAll(
-      'table.container tbody tr'
+  const tableRowElements = document.querySelectorAll(
+    'table.container tbody tr'
+  );
+
+  const searchFieldElement = document.getElementById('searchField');
+
+  function getMatchElements(input) {
+    return [...tableRowElements].filter((rowElement) =>
+      rowElement.textContent.toLowerCase().includes(input.toLowerCase())
     );
+  }
 
-    function getMatchElements(input) {
-      return [...tableRowElements].filter((rowElement) =>
-        rowElement.textContent.toLowerCase().includes(input.toLowerCase())
-      );
-    }
+  function clearPreviousState() {
+    [...tableRowElements].forEach((rowEl) => {
+      rowEl.classList.remove('select');
+    });
+  }
 
-    function clearPreviousState() {
-      [...tableRowElements].forEach((rowEl) => {
-        rowEl.classList.remove('select');
-      });
-    }
-
+  function onClick() {
     clearPreviousState();
 
-    const searchFieldElement = document.getElementById('searchField');
-    const matchRows = getMatchElements(searchFieldElement.value);
-
-    matchRows.forEach((matchRow) => {
+    getMatchElements(searchFieldElement.value).forEach((matchRow) => {
       matchRow.classList.add('select');
     });
 
