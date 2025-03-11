@@ -12,5 +12,11 @@ function solve() {
     .split('. ')
     .map((x) => x.trim().concat('.'));
 
+  for (let i = 0; i < sentence.length; i += 3) {
+    const currentText = sentence.slice(i, 3).join(' ');
+    const currentParagraph = createParagraphElement(currentText);
+    outputAreaElement.appendChild(currentParagraph);
+  }
+
   console.log(sentence);
 }
