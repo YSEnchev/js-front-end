@@ -9,11 +9,16 @@ function solve() {
   }
 
   const sentence = textAreaElement.value
-    .split('. ')
-    .map((x) => x.trim().concat('.'));
+    .split('.')
+    .filter(Boolean)
+    .map((x) => x.trim());
 
   for (let i = 0; i < sentence.length; i += 3) {
-    const currentText = sentence.slice(i, 3).join(' ');
+    debugger;
+    const currentText = sentence
+      .slice(i, i + 3)
+      .join('.')
+      .concat('.');
     const currentParagraph = createParagraphElement(currentText);
     outputAreaElement.appendChild(currentParagraph);
   }
