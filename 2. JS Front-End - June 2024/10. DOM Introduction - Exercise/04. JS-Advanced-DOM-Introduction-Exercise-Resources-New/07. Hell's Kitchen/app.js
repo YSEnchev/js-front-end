@@ -8,7 +8,7 @@ function solve() {
   const workersElement = document.querySelector('#outputs #workers p');
 
   function onClick() {
-    const restaurants = JSON.parse(inputTextArea.value).map((data) => {
+    const restaurants = JSON.parse(inputTextArea.value).reduce((acc, data) => {
       const [restaurantName, workerData] = data.split(' - ');
 
       const workers = workerData.split(', ').map((workerData) => {
@@ -18,11 +18,17 @@ function solve() {
           salary: Number(salary),
         };
       });
-      return {
-        restaurantName,
-        workers,
-      };
-    });
+
+      if (!acc.hasOwnProperty(restaurantName)) {
+        acc[restaurantName] = {
+          workers: [],
+        };
+      }
+
+      acc[restaurantName].workers.concat(workers);
+
+      return acc;
+    }, {});
 
     console.log(restaurants);
   }
