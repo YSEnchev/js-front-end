@@ -4,9 +4,19 @@ function deleteByEmail() {
   const resultElement = document.getElementById('result');
 
   const searchEmailInput = inputElement.value;
-  const tableRowElements = customerTablaElement.querySelectorAll('tbody tr');
 
-  console.log(customerTablaElement);
-  console.log(inputElement);
-  console.log(resultElement);
+  const tdElements = customerTablaElement.querySelectorAll(
+    'tbody td:last-child'
+  );
+
+  const searchElement = Array.from(tdElements).find(
+    (el) => el.textContent === searchEmailInput
+  );
+
+  if (searchElement) {
+    searchElement.parentNode.remove();
+    resultElement.textContent = 'Deleted.';
+  } else {
+    resultElement.textContent = 'Not found.';
+  }
 }
