@@ -14,6 +14,7 @@ function validate() {
     if (!pattern.test(e.currentTarget.value)) {
       return e.currentTarget.classList.add('error');
     }
+
     e.currentTarget.classList.remove('error');
   });
 }
