@@ -16,8 +16,8 @@ function create(words) {
   words.forEach((word) => {
     const divElements = createWordStructure(word);
 
-    divElements.addEventListener('click', (e) => {
-      e.target.querySelector('p').style.display = 'block';
+    divElements.addEventListener('click', (event) => {
+      event.target.querySelector('p').style.display = 'block';
     });
 
     contentDivElement.appendChild(divElements);
