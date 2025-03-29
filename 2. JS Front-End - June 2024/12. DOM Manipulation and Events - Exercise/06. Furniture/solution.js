@@ -32,5 +32,14 @@ function solve() {
     inputData.forEach(appendTrForEachData);
   }
 
+  function onBuyBtnClickHandler() {
+    const allCheckedInputElements = [
+      ...document.querySelectorAll("input[type='checkbox']"),
+    ].filter((inputElement) => inputElement.checked);
+
+    console.log(allCheckedInputElements);
+  }
+
   generateBtn.addEventListener('click', onGenerateBtnClickHandler);
+  buyBtn.addEventListener('click', onBuyBtnClickHandler);
 }
