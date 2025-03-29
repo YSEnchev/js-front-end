@@ -21,7 +21,11 @@ function solve() {
     currentTrClone.children[3].children[0].textContent = decFactor;
 
     //enable the checkbox
-    currentTrClone.children[4].children[0].disabled = false;
+    const checkBoxElement = currentTrClone.children[4].children[0];
+    checkBoxElement.disabled = false;
+    checkBoxElement.setAttribute('name', name);
+    checkBoxElement.setAttribute('price', price);
+    checkBoxElement.setAttribute('decFactor', decFactor);
 
     tBodyElement.appendChild(currentTrClone);
   }
