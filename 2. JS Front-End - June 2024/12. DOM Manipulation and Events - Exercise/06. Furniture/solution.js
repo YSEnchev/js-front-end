@@ -39,9 +39,11 @@ function solve() {
   function onBuyBtnClickHandler() {
     const allCheckedInputElements = [
       ...document.querySelectorAll("input[type='checkbox']"),
-    ].filter((inputElement) => inputElement.checked);
+    ]
+      .filter((inputElement) => inputElement.checked)
+      .reduce((acc, curr) => {}, { name: '', totalPrice: 0, avgDecFactor: 0 });
 
-    console.log(allCheckedInputElements);
+    console.log(allCheckedInputElements[0].getAttribute('decFactor'));
   }
 
   generateBtn.addEventListener('click', onGenerateBtnClickHandler);
