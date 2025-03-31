@@ -55,9 +55,11 @@ function solve() {
 
     console.log(outputData);
 
-    outputTextarea.value = `Bought furniture: ${outputData.names.join(', ')}
-    Total price: ${outputData.totalPrice.toFixed(2)}
-    Average decoration factor: ${
+    outputTextarea.value = `Bought furniture: ${outputData.names.join(
+      ', '
+    )}\nTotal price: ${outputData.totalPrice.toFixed(
+      2
+    )}\nAverage decoration factor: ${
       outputData.totalDecFactor / outputData.names.length
     }`;
   }
