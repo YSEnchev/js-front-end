@@ -19,6 +19,7 @@ function addItem() {
     textInputElement.value,
     valueInputElement.value
   );
+
   document.getElementById('menu').appendChild(optionElement);
 
   clearInputs();
