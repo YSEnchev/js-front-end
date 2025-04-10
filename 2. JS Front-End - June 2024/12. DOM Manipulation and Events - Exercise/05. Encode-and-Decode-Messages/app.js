@@ -4,7 +4,7 @@ function encodeAndDecodeMessages() {
   const [encodeTextAreaElement, decodeTextAreaElement] =
     document.querySelectorAll('textarea');
 
-  function encodeMessage(text, asciiDiff) {
+  function encodeOrDecodeMessage(text, asciiDiff) {
     return text
       .split('')
       .map((char) => {
@@ -36,13 +36,16 @@ function encodeAndDecodeMessages() {
 
   function encodeMessageHandler() {
     // decodeTextAreaElement.value = encodeMessage(encodeTextAreaElement.value);
-    decodeTextAreaElement.value = encodeMessage(encodeTextAreaElement.value, 1);
+    decodeTextAreaElement.value = encodeOrDecodeMessage(
+      encodeTextAreaElement.value,
+      1
+    );
     encodeTextAreaElement.value = '';
   }
 
   function decodeMessageHandler() {
     // decodeTextAreaElement.value = decodeMessage(decodeTextAreaElement.value);
-    decodeTextAreaElement.value = encodeMessage(
+    decodeTextAreaElement.value = encodeOrDecodeMessage(
       decodeTextAreaElement.value,
       -1
     );
