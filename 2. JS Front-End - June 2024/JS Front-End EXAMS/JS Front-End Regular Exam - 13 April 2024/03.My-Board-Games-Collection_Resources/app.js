@@ -1,9 +1,33 @@
 const baseUrl = `http://localhost:3030/jsonstore/games`;
 
 const loadButton = document.getElementById('load-games');
+const addButton = document.getElementById('add-game');
 const gameList = document.getElementById('games-list');
 
+const nameInput = document.getElementById('g-name');
+const typeInput = document.getElementById('type');
+const playersInput = document.getElementById('players');
+
 loadButton.addEventListener('click', loadGames);
+addButton.addEventListener('click', addGame);
+
+async function addGame() {
+  const name = nameInput.value;
+  const type = typeInput.value;
+  const players = playersInput.value;
+
+  clearInputs();
+
+  await fetch(baseUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ name, type, players }),
+  });
+
+  await loadGames();
+}
 
 async function loadGames() {
   gameList.innerHTML = '';
@@ -13,20 +37,20 @@ async function loadGames() {
   const games = Object.values(result);
 
   const gameElements = games.map((game) =>
-    createGameElement(game.gameName, game.type, game.pMaxPlayerElement)
+    createGameElement(game.name, game.type, game.players)
   );
-  console.log(gameElements);
+  gameList.append(...gameElements);
 }
 
-function createGameElement(gameName, type, maxPlayer) {
+function createGameElement(name, type, players) {
   const pNameElement = document.createElement('p');
-  pNameElement.textContent = gameName;
+  pNameElement.textContent = name;
 
   const pTypeElement = document.createElement('p');
   pTypeElement.textContent = type;
 
   const pMaxPlayerElement = document.createElement('p');
-  pMaxPlayerElement.textContent = maxPlayer;
+  pMaxPlayerElement.textContent = players;
 
   const divContentElement = document.createElement('div');
   divContentElement.classList.add('content');
@@ -53,4 +77,10 @@ function createGameElement(gameName, type, maxPlayer) {
   gameDivElement.appendChild(divButtons);
 
   return gameDivElement;
+}
+
+function clearInputs() {
+  nameInput.value = '';
+  typeInput.value = '';
+  playersInput.value = '';
 }
